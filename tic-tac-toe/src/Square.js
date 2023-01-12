@@ -24,7 +24,6 @@ function Square(props) {
         </div>
     );
 }
+/* <p style={{fontSize: '10px'}}>{props.iswinning}</p> */
 
 export default Square;
-
-{/* <p style={{fontSize: '10px'}}>{props.iswinning}</p> */ }

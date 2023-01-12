@@ -5,7 +5,7 @@ import InfoBoard from './InfoBoard';
 import StatusBoard from './StatusBoard';
 import { useEffect, useState } from 'react';
 
-const defaultSquares = () => Array.apply(null, Array(9)).map(function () { })
+const defaultSquares = () => Array.apply(null, Array(9));
 // const defaultSquares = () => Array.apply(null, Array(9)).map(function (x, i) {})
 
 const lines = [
@@ -116,6 +116,7 @@ function App() {
       }
     }
   }
+  // eslint-disable-next-line
   }, [currPlayer])
 
 
@@ -139,12 +140,12 @@ const handleSquareClick = (index) => {
 
 const isPlayerTurn = squares.filter(square => square !== undefined).length % 2 === 0
 
-const isPlayerTwoTurn = squares.filter(square => square !== null).length % 2 === 1;
+// const isPlayerTwoTurn = squares.filter(square => square !== null).length % 2 === 1;
 
-const winStyles = {
-  backgroundColor: '#2cbbb0',
-  color: '#0e141a'
-}
+// const winStyles = {
+//   backgroundColor: '#2cbbb0',
+//   color: '#0e141a'
+// }
 
 
 // useEffect(() => {
@@ -162,6 +163,7 @@ return (
 
   <main>
     <Board>
+      <div>{winner} is winning!</div>
       <InfoBoard
         player={currPlayer}
         reset={reset}
